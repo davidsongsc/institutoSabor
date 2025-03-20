@@ -18,14 +18,15 @@ export default {
                 senary: "#CACACB",
                 transparent: "transparent",
             },
-            borderRadius: {
-                xl: "1rem",
-                "3xl": "25px",
-                "3x2": "50px",
-            },
+           
             fontSize: {
                 sm: "12px",
                 ssm: "10px",
+                "4xl": "1.5rem",
+                "5xl": "2rem",
+                "6xl": "2.5rem",
+                "7xl": "3.5rem",
+                
             },
         },
     },

@@ -1,4 +1,4 @@
-import HomePage from "../templates/homepage";
+import HomePage from "../../templates/homepage";
 
 export default function Home() {
     return (
