@@ -17,7 +17,7 @@ const items = [
 
 const HeaderExterno: React.FC = () => {
     return (
-        <header className="grid grid-cols-12 gap-4  h-[100px] items-center justify-center">
+        <header className="grid grid-cols-12 gap-4 h-[100px] items-center justify-center">
             <span className="col-span-2"></span>
             <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="col-span-1 " />
             <Menu theme="light" mode="horizontal" items={items} className="col-span-5 flex items-center justify-center font-bold text-2xl" />

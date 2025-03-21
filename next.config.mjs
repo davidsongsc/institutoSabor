@@ -3,6 +3,8 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
+    domains: ["maps.googleapis.com"],
+
     remotePatterns: [
       {
         protocol: "http",

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 };
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "700", "800", "900"],
+  weight: ["200", "300", "400", "600", "700", "800", "900"],
   variable: "--font-montserrat",
 });
 export default function RootLayout({
@@ -38,13 +38,18 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.variable} ${montserrat.variable}  antialiased `}
-
+        className={`${inter.variable} ${montserrat.variable}  antialiased h-screen bg-[url('/images/bg/background-principal.webp')] bg-no-repeat bg-top    
+`}
+        style={{
+          backgroundSize: "100% 900px",
+          backgroundPositionY: "-45px",
+        }}
       >
         <ConfigProvider
           theme={{
             token: {
-              colorPrimary: "#1890ff",
+              colorPrimary: config.theme.colors.primary,
+              colorPrimaryHover: config.theme.colors.quaternary,
               borderRadius: 8,
             },
             components: {
@@ -55,6 +60,8 @@ export default function RootLayout({
               Button: {
                 colorPrimary: config.theme.colors.primary,
                 fontWeight: "bold",
+                defaultHoverBg: config.theme.colors.primary,
+                defaultHoverColor: config.theme.colors.primary,
               },
               Card: {
                 colorBgContainer: config.theme.colors.quinary,
@@ -63,13 +70,11 @@ export default function RootLayout({
           }}
         >
           <App>
-            <Layout className="h-screen bg-[url('/images/bg/background-principal.webp')] bg-no-repeat bg-top m-w-[1020px]" style={{
-              backgroundSize: "100% 900px",
-              backgroundPositionY: "-45px",
-            }}>
-              <HeaderExterno />
-              {children}
-            </Layout>
+
+            <HeaderExterno />
+
+            {children}
+
           </App>
         </ConfigProvider>
       </body>

@@ -1,0 +1,18 @@
+.dTexto {
+    font-size: 1.5rem;
+}
+
+.dTitulo {
+    font-size: 4rem;
+}
+
+.PositionBgMedia {
+    left: -321px;
+    top: -63px;
+    background-size: contain;
+}
+
+.PositionBg {
+    left: 0;
+    top: -65px;
+}

@@ -17,6 +17,7 @@ export default {
                 quinary: "#F6F6F6",
                 senary: "#CACACB",
                 transparent: "transparent",
+                backgroundPrimary: "#EBEBEB"
             },
            
             fontSize: {
@@ -24,9 +25,22 @@ export default {
                 ssm: "10px",
                 "4xl": "1.5rem",
                 "5xl": "2rem",
-                "6xl": "2.5rem",
+                "6xl": "2.4rem",
                 "7xl": "3.5rem",
-                
+                "8xl": "5.5rem",
+                "9xl": "6.5rem",
+                "10xl": "7.0rem",
+                "11xl": "8.5rem",
+                "12xl": "9.5rem",
+                "13xl": "10.5rem",
+                "14xl": "11.5rem",
+                "15xl": "12.5rem",
+                "16xl": "13.5rem",
+                "17xl": "14.5rem",
+                "18xl": "15.5rem",
+                "blogTitle": "7rem",
+                "blogSubTitle": "2.3rem",
+                "blogText": "1.9rem",
             },
         },
     },
