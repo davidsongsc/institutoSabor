@@ -30,6 +30,7 @@
     "grapesjs-rulers": "^1.0.8",
     "js-cookie": "^3.0.5",
     "next": "14.2.18",
+    "papaparse": "^5.5.2",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.5.0",
