@@ -24,50 +24,53 @@ const Carrossel: React.FC = () => {
   const sliderRef = useRef<any>(null);
 
   return (
-    <div className=" relative w-full max-w-[1500px] mx-auto my-8">
+    <div className="relative w-full max-w-[1500px] mx-auto my-8 px-4">
       <button
-        className="  absolute left-[-35px] top-1/2 transform -translate-y-[45px] z-10  shadow-md  "
+        className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-10 bg-terciary shadow-md rounded-full p-2 hidden md:flex"
         onClick={() => sliderRef.current?.prev()}
       >
-        <LeftOutlined className="text-xl bg-terciary rounded-full p-1 text-secondary" />
+        <LeftOutlined className="text-xl  text-secondary" />
       </button>
 
       <Carousel
         ref={sliderRef}
         dots={false}
-        slidesToShow={3}
-        slidesToScroll={1}
         infinite={false}
+        responsive={[
+          { breakpoint: 1900, settings: { slidesToShow: 4, slidesToScroll: 1 } }, 
+          { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } }, 
+          { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } }, 
+          { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } }, 
+        ]}
+        className="w-full"
       >
-
         {items.map((item) => (
-          <div key={item.id} className="w-[460px] mx-2 ">
-            <div className="border border-[1px] border-black rounded-[20px] shadow-lg overflow-hidden bg-white text-center mx-3">
+          <div key={item.id} className="px-2">
+            <div className="border border-black rounded-[20px] shadow-lg overflow-hidden bg-white text-center">
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-[200px] object-cover"
               />
-              <div className="p-4  bg-quinary flex flex-col items-center w-full justify-between">
-                <h3 className="text-3xl Nexa font-bold text-left px-2 pb-4">{item.title}</h3>
-                <div className="flex  justify-between items-end w-full  px-2">
-                  <Link href="/quem-somos" className="text-2xl Nexa font-bold text-primary">saiba mais</Link>
-                  <p className="text-sm Nexa">
-                    {item.data}</p>
+              <div className="p-4 bg-quinary flex flex-col items-center w-full justify-between">
+                <h3 className="text-2xl md:text-3xl Nexa font-bold text-left px-2 pb-4">{item.title}</h3>
+                <div className="flex justify-between items-end w-full px-2">
+                  <Link href="/quem-somos" className="text-xl md:text-2xl Nexa font-bold text-primary">
+                    saiba mais
+                  </Link>
+                  <p className="text-sm Nexa">{item.data}</p>
                 </div>
               </div>
             </div>
           </div>
-
         ))}
-
       </Carousel>
 
       <button
-        className="absolute right-[-35px] top-1/2 transform -translate-y-[45px] z-10  shadow-md "
+        className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-10 bg-terciary shadow-md rounded-full p-2 hidden md:flex"
         onClick={() => sliderRef.current?.next()}
       >
-        <RightOutlined className="text-xl bg-terciary rounded-full p-1 text-secondary" />
+        <RightOutlined className="text-xl text-secondary" />
       </button>
     </div>
   );

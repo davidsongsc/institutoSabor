@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.variable} ${montserrat.variable}  antialiased h-screen bg-[url('/images/bg/background-principal.webp')] bg-no-repeat bg-top    
+        className={`${inter.variable} ${montserrat.variable}  antialiased h-screen bg-[url('/images/bg/background-principal.webp')] bg-no-repeat bg-center    
 `}
         style={{
           backgroundSize: "100% 900px",
