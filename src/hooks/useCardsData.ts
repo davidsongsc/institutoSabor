@@ -45,6 +45,7 @@ export function useCardsData(csvUrl: string) {
         });
 
         setCards(formatted);
+        console.log(formatted);
       } catch (err) {
         console.error("Erro ao buscar ou processar CSV:", err);
         notification.error({
