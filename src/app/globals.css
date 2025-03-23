@@ -31,3 +31,8 @@ body {
 .Nexa {
   font-family: 'Nexa';
 }
+
+.ocultar-scroll {
+  overflow-x: hidden;
+  
+}

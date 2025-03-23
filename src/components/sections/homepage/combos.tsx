@@ -1,0 +1,87 @@
+import Image from "next/image";
+import React, { useState } from "react";
+import { Button, Spin } from "antd";
+import { useCardsData } from "@/hooks/useCardsData";
+import CardCombosExclusivos from "@/components/cards/cardsCombo";
+import CardCombosLoading from "@/components/cards/cardsComboLoading";
+import ficticioLoading from "@/services/fake";
+import { motion, AnimatePresence } from "framer-motion";
+
+const CombosExclusivos: React.FC = () => {
+    const googlePasta = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRb4Gfi3HjunpPb_-tMBmwYNfrfDQffiY1oZheCBrITYr3SV4oZ8aiVTprLoTOh5_gntnjl3U2gRNre/pub?output=csv";
+    const { cards, loading, error } = useCardsData(googlePasta);
+    const [activeIndex, setActiveIndex] = useState(1);
+    return (
+        <>
+            <section className="mt-60 h-[130px] flex items-start justify-center Nexa">
+                <h1 className="uppercase text-[calc(2rem+1.5vw)] text-center relative z-10 font-[800]" >Conheça nossos <span className="text-primary">combos exclusivos</span></h1>
+            </section>
+            <section className="flex justify-center flex-wrap items-start h-auto gap-[20px] bg-[url('/images/bg/background-combos.webp')] bg-no-repeat bg-top m-w-[1020px]"
+                style={{
+                    backgroundSize: "100% 1200px",
+                    backgroundPositionY: "-195px",
+                }}
+            >
+                <div className="absolute h-screen inset-0 bg-[url('/images/bg/background-legumes.webp')] bg-cover bg-top bg-[-30px_-280px] z-1 opacity-5"></div>
+                
+                <AnimatePresence>
+                    {loading && ficticioLoading.map((card, index) => {
+                        const words = card.title.split(" ");
+                        const middleIndex = words.length > 3 ? Math.ceil(words.length / 2) : 1;
+
+                        return (
+                            <motion.div
+                                key={card.id}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                            >
+                                <CardCombosLoading
+                                    card={card}
+                                    activeIndex={activeIndex}
+                                    setActiveIndex={setActiveIndex}
+                                    index={index}
+                                    words={words}
+                                    middleIndex={middleIndex}
+                                    isLoading
+                                />
+                            </motion.div>
+                        );
+                    })}
+                </AnimatePresence>
+
+                <AnimatePresence>
+                    {!loading && cards.map((card, index) => {
+                        const words = card.title.split(" ");
+                        const middleIndex = words.length > 3 ? Math.ceil(words.length / 2) : 1;
+
+                        return (
+                            <motion.div
+                                key={card.id}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                transition={{ duration: 0.9,delay: 0.5, ease: "easeInOut" }}
+                            >
+                                <CardCombosExclusivos
+                                    card={card}
+                                    activeIndex={activeIndex}
+                                    setActiveIndex={setActiveIndex}
+                                    index={index}
+                                    words={words}
+                                    middleIndex={middleIndex}
+                                />
+                            </motion.div>
+                        );
+                    })}
+                </AnimatePresence>
+            </section>
+            <div className="flex items-center justify-center py-5">
+                <Button type="primary" size="large" className="uppercase text-[calc(1rem+1.5vw)] p-8 Nexa" >Conheça outros cursos</Button>
+            </div>
+        </>
+    )
+}
+
+export default React.memo(CombosExclusivos);

@@ -17,11 +17,11 @@ const items = [
 
 const HeaderExterno: React.FC = () => {
     return (
-        <header className="grid grid-cols-12 gap-4 h-[100px] items-center justify-center">
-            <span className="col-span-2"></span>
-            <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="col-span-1 " />
-            <Menu theme="light" mode="horizontal" items={items} className="col-span-5 flex items-center justify-center font-bold text-2xl" />
-            <nav className="col-span-2">
+        <header className="grid grid-cols-12 gap-4 h-[100px] items-center justify-center bg-transparent">
+            <span className="col-span-2 hidden lg:block" ></span>
+            <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="col-span-1 hidden lg:block" />
+            <Menu theme="light" mode="horizontal" items={items} className="col-span-12 lg:col-span-5 flex items-center justify-center font-bold text-2xl" />
+            <nav className="col-span-2 hidden lg:block">
                 <ul className="flex gap-3 items-center">
                     <li className="p-2 bg-primary rounded-full text-secondary"><InstagramIcon /></li>
                     <li className="p-2 bg-primary rounded-full text-secondary"><FacebookIcon /></li>
