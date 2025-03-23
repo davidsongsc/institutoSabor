@@ -1,20 +1,38 @@
 'use client';
 
 import './styles.css';
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SejaBemVindo from "@/components/sections/homepage/bemvindo";
 import CombosExclusivos from "@/components/sections/homepage/combos";
 import TransformeCarreira from "@/components/sections/homepage/paixao";
+import FormacaoTecnica from "@/components/sections/homepage/formacao";
+import Blog from '@/components/sections/homepage/blog';
+import EduOn from '@/components/sections/homepage/eduon';
+import Localizacao from '@/components/sections/homepage/localizacao';
 const HomePage: React.FC = () => {
-    return (
-        <main className="">
+    const [isVisible, setIsVisible] = useState(false);
 
+    useEffect(() => {
+        const timer = setTimeout(() => setIsVisible(true), 500);
+        return () => clearTimeout(timer); 
+    }, []);
+    
+    return (
+        <main
+            className={`opacity-0 transition-opacity duration-1000 ease-in-out transition-delay-500 ${isVisible ? "opacity-100" : ""
+                }`}
+        >
             <SejaBemVindo />
-            <TransformeCarreira/>
-            {/* 
+
+            <TransformeCarreira />
+
             <CombosExclusivos />
-      
-        <FormacaoTecnica />
+
+            <FormacaoTecnica />
+            <Blog />
+            <EduOn />
+            <Localizacao />
+            {/* 
             */}
 
         </main >

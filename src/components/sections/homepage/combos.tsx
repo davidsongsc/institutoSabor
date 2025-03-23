@@ -13,17 +13,26 @@ const CombosExclusivos: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState(1);
     return (
         <>
-            <section className="mt-60 h-[130px] flex items-start justify-center Nexa">
-                <h1 className="uppercase text-[calc(2rem+1.5vw)] text-center relative z-10 font-[800]" >Conheça nossos <span className="text-primary">combos exclusivos</span></h1>
+            <section className="mt-60 h-[130px] flex items-start justify-center Nexa relative top-[-120px] 2xl:top-0">
+                <h1 className="uppercase text-[2rem] lg:text-[3rem] xl:text-[4rem] text-center relative z-10 font-[800]" >Conheça nossos <span className="text-primary">combos exclusivos</span></h1>
             </section>
-            <section className="flex justify-center flex-wrap items-start h-auto gap-[20px] bg-[url('/images/bg/background-combos.webp')] bg-no-repeat bg-top m-w-[1020px]"
+            <section
+            id="combos-exclusivos"
+                className="flex justify-start items-center sm:items-start h-[800px] sm:h-auto gap-[20px] 
+               bg-[url('/images/bg/background-combos.webp')] bg-no-repeat bg-top m-w-[1020px] 
+               mt-[-40px] 2xl:mt-[0] relative z-10
+               sm:flex-wrap sm:justify-center items-end 
+               flex-row overflow-x-scroll sm:overflow-x-hidden overflow-y-hidden
+               
+              "
                 style={{
                     backgroundSize: "100% 1200px",
                     backgroundPositionY: "-195px",
+                    WebkitOverflowScrolling: "touch",
                 }}
             >
                 <div className="absolute h-screen inset-0 bg-[url('/images/bg/background-legumes.webp')] bg-cover bg-top bg-[-30px_-280px] z-1 opacity-5"></div>
-                
+
                 <AnimatePresence>
                     {loading && ficticioLoading.map((card, index) => {
                         const words = card.title.split(" ");
@@ -36,6 +45,7 @@ const CombosExclusivos: React.FC = () => {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
+                                className="shrink-0 sm:w-auto"
                             >
                                 <CardCombosLoading
                                     card={card}
@@ -62,7 +72,8 @@ const CombosExclusivos: React.FC = () => {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 0.9,delay: 0.5, ease: "easeInOut" }}
+                                transition={{ duration: 0.9, delay: 0.5, ease: "easeInOut" }}
+                                className="shrink-0 sm:w-auto"
                             >
                                 <CardCombosExclusivos
                                     card={card}
@@ -76,6 +87,7 @@ const CombosExclusivos: React.FC = () => {
                         );
                     })}
                 </AnimatePresence>
+
             </section>
             <div className="flex items-center justify-center py-5">
                 <Button type="primary" size="large" className="uppercase text-[calc(1rem+1.5vw)] p-8 Nexa" >Conheça outros cursos</Button>
