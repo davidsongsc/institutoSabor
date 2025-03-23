@@ -6,7 +6,7 @@ import { Button, Spin } from "antd";
 const FormacaoTecnica: React.FC = () => {
     return (
         <section className="grid grid-cols-12 items-center  h-auto text-secondary mt-16 bg-[url('/images/bg/background-formacao.webp')]
-                              bg-cover bg-center w-full px-[120px] bg-primary   sm:py-[40px] md:py-[20px] px-0">
+                              bg-cover bg-center w-full sm:px-[120px] bg-primary   sm:py-[40px] md:py-[20px] px-0">
             <div className="col-span-12 grid grid-cols-12 max-w-[1900px] mx-auto">
 
 

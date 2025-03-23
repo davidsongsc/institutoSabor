@@ -38,7 +38,8 @@ const Carrossel: React.FC = () => {
         infinite={false}
 
         responsive={[
-          { breakpoint: 1900, settings: { slidesToShow: 4, slidesToScroll: 1 } }, // Telas muito grandes
+          { breakpoint: 1900, settings: { slidesToShow: 5, slidesToScroll: 1 } }, // Telas muito grandes
+          { breakpoint: 1536, settings: { slidesToShow: 4, slidesToScroll: 1 } }, // Telas muito grandes
           { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } }, // Telas grandes
           { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } }, // Tablets
           { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },  // Celulares
@@ -53,13 +54,13 @@ const Carrossel: React.FC = () => {
                 alt={item.title}
                 className="w-full h-[200px] object-cover"
               />
-              <div className="p-4 bg-quinary flex flex-col items-center w-full justify-between h-[200px] xl:h-[150px] sm:h-[110px]">
-                <h3 className="xl:text-[1.4rem] md:text-[0.9rem] text-[1rem] Nexa font-bold text-left px-2 pb-4">{item.title}</h3>
+              <div className="p-4 bg-quinary flex flex-col items-center w-full justify-between 2xl:h-[220px] h-[200px] xl:h-[150px] sm:h-[110px]">
+                <h3 className="xl:text-[1.2rem] md:text-[0.9rem] text-[1rem] Nexa 2xl:text-[1.5rem] font-bold text-left px-2 pb-4">{item.title}</h3>
                 <div className="flex justify-between items-end w-full px-2">
-                  <Link href="/quem-somos" className="text-[1rem] 2xl:text-[1.5rem] Nexa font-bold text-primary" >
+                  <Link href="/quem-somos" className="text-[1rem] 2xl:text-[1.3rem] Nexa font-bold text-primary" >
                     saiba mais
                   </Link>
-                  <p className="text-[0.8rem] Nexa">{item.data}</p>
+                  <p className="text-[0.8rem] 2xl:text-[.7rem] Nexa">{item.data}</p>
                 </div>
               </div>
             </div>

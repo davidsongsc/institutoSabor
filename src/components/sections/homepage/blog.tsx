@@ -7,7 +7,7 @@ const BlogSabor: React.FC = () => {
     const width = useWindowWidth();
 
     return (
-        <section className={`bg-[url('/images/bg/background-sabor.webp')]
+        <section id="blog-do-sabor" className={`bg-[url('/images/bg/background-sabor.webp')]
                                 bg-cover bg-center w-full  
                                 grid grid-cols-12 items-start 
                                 ${width <= 1920 ? "" : "max-w-[1900px] mx-auto  bg-[0px_-80px]  h-auto"}`}>
