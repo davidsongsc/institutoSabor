@@ -18,7 +18,7 @@ const CardCombosExclusivos: React.FC<CardCombosProps> = ({
     index,
     words,
     middleIndex
- }) => {
+}) => {
 
 
     return (
@@ -55,9 +55,16 @@ const CardCombosExclusivos: React.FC<CardCombosProps> = ({
                             type="primary"
                             className={`mt-5 px-5 py-8 uppercase rounded-[10px] text-[2.7rem] ${activeIndex === index ? "bg-quaternary" : "group-hover:bg-quaternary"
                                 }`}
+                            onClick={() => {
+                                const element = document.getElementById('seja-bem-vindo');
+                                if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
                         >
                             Saiba mais
                         </Button>
+                        
                     </div>
 
                     <div className="w-full bg-gray-100 flex items-start justify-start" >

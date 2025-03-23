@@ -24,9 +24,9 @@ const Carrossel: React.FC = () => {
   const sliderRef = useRef<any>(null);
 
   return (
-    <div className="relative w-full max-w-[1500px] mx-auto my-8 px-4">
+    <div className="relative w-full max-w-[1500px] mx-auto my-8 px-2">
       <button
-        className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-10 bg-terciary shadow-md rounded-full p-2 hidden md:flex"
+        className="absolute left-0 2xl:left-[-20px] top-1/2 transform -translate-y-1/2 z-10 bg-terciary shadow-md rounded-full p-2 hidden sm:flex " 
         onClick={() => sliderRef.current?.prev()}
       >
         <LeftOutlined className="text-xl  text-secondary" />
@@ -36,11 +36,13 @@ const Carrossel: React.FC = () => {
         ref={sliderRef}
         dots={false}
         infinite={false}
+
         responsive={[
-          { breakpoint: 1900, settings: { slidesToShow: 4, slidesToScroll: 1 } }, 
-          { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } }, 
-          { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } }, 
-          { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } }, 
+          { breakpoint: 1900, settings: { slidesToShow: 5, slidesToScroll: 1 } }, // Telas muito grandes
+          { breakpoint: 1536, settings: { slidesToShow: 4, slidesToScroll: 1 } }, // Telas muito grandes
+          { breakpoint: 1280, settings: { slidesToShow: 3, slidesToScroll: 1 } }, // Telas grandes
+          { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } }, // Tablets
+          { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },  // Celulares
         ]}
         className="w-full"
       >
@@ -52,13 +54,13 @@ const Carrossel: React.FC = () => {
                 alt={item.title}
                 className="w-full h-[200px] object-cover"
               />
-              <div className="p-4 bg-quinary flex flex-col items-center w-full justify-between">
-                <h3 className="text-2xl md:text-3xl Nexa font-bold text-left px-2 pb-4">{item.title}</h3>
+              <div className="p-4 bg-quinary flex flex-col items-center w-full justify-between 2xl:h-[220px] h-[200px] xl:h-[150px] sm:h-[110px]">
+                <h3 className="xl:text-[1.2rem] md:text-[0.9rem] text-[1rem] Nexa 2xl:text-[1.5rem] font-bold text-left px-2 pb-4">{item.title}</h3>
                 <div className="flex justify-between items-end w-full px-2">
-                  <Link href="/quem-somos" className="text-xl md:text-2xl Nexa font-bold text-primary">
+                  <Link href="/quem-somos" className="text-[1rem] 2xl:text-[1.3rem] Nexa font-bold text-primary" >
                     saiba mais
                   </Link>
-                  <p className="text-sm Nexa">{item.data}</p>
+                  <p className="text-[0.8rem] 2xl:text-[.7rem] Nexa">{item.data}</p>
                 </div>
               </div>
             </div>
@@ -67,7 +69,7 @@ const Carrossel: React.FC = () => {
       </Carousel>
 
       <button
-        className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-10 bg-terciary shadow-md rounded-full p-2 hidden md:flex"
+        className="absolute right-0 2xl:right-[-20px] top-1/2 transform -translate-y-1/2 z-10 bg-terciary shadow-md rounded-full p-2 hidden sm:flex"
         onClick={() => sliderRef.current?.next()}
       >
         <RightOutlined className="text-xl text-secondary" />
