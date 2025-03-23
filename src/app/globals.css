@@ -36,3 +36,12 @@ body {
   overflow-x: hidden;
   
 }
+
+.custom-bg {
+  background: linear-gradient(
+    to right,
+    var(--primary) 20%, /* Cor primária até 20% */
+    var(--secondary) 50%, /* Cor secundária até 50% */
+    transparent 80% /* Transparente após 80% */
+  );
+}

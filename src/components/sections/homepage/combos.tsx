@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Button, Spin } from "antd";
-import { useCardsData } from "@/hooks/useCardsData";
+import { useCardsDataOffline } from "@/hooks/useCardsDataOffline";
 import CardCombosExclusivos from "@/components/cards/cardsCombo";
 import CardCombosLoading from "@/components/cards/cardsComboLoading";
 import ficticioLoading from "@/services/fake";
@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const CombosExclusivos: React.FC = () => {
     const googlePasta = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRb4Gfi3HjunpPb_-tMBmwYNfrfDQffiY1oZheCBrITYr3SV4oZ8aiVTprLoTOh5_gntnjl3U2gRNre/pub?output=csv";
-    const { cards, loading, error } = useCardsData(googlePasta);
+    const { cards, loading, error } = useCardsDataOffline();
     const [activeIndex, setActiveIndex] = useState(1);
     return (
         <>

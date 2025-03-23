@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={` 
-          ${inter.variable} ${montserrat.variable}  antialiased h-screen bg-[url('/images/bg/background-principal.webp')] bg-cover  bg-[0_-120px]  2xl:bg-right bg-no-repeat bg-left  ocultar-scroll   
+          ${inter.variable} ${montserrat.variable}  antialiased h-screen  ocultar-scroll   
 `}
 
       >
@@ -68,11 +68,18 @@ export default function RootLayout({
           }}
         >
           <App>
+            <Layout
+              className="bg-[url('/images/bg/background-principal.webp')] 2xl:bg-contain bg-right bg-top bg-no-repeat"
+              style={{
+                backgroundImage: "url('/images/bg/background-principal.webp')",
+                backgroundPosition: "right top", 
+                backgroundRepeat: "no-repeat",
+                backgroundPositionY: "-140px",
+              }}>
+              <HeaderExterno />
 
-            <HeaderExterno />
-
-            {children}
-
+              {children}
+            </Layout>
           </App>
         </ConfigProvider>
       </body>

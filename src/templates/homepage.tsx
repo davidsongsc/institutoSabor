@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 500);
-        return () => clearTimeout(timer); 
+        return () => clearTimeout(timer);
     }, []);
 
     return (
@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
                 }`}
         >
             <SejaBemVindo />
-
+         
             <TransformeCarreira />
 
             <CombosExclusivos />
@@ -34,8 +34,8 @@ const HomePage: React.FC = () => {
             <EduOn />
             <Localizacao />
             <Footer />
-            {/* 
-            */}
+           
+              {/*  */}
 
         </main >
     );

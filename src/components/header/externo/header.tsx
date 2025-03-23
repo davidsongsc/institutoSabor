@@ -18,13 +18,13 @@ const items = [
 
 const HeaderExterno: React.FC = () => {
     return (
-        <header className="grid grid-cols-12 gap-4 h-[100px] items-center justify-center bg-transparent">
+        <header className="grid grid-cols-12 gap-4 h-[100px] items-center justify-center 2xl:bg-transparent bg-secondary">
             <span className="col-span-2 hidden lg:block"></span>
-            <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="col-span-1 hidden lg:block" />
+            <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="pl-4 lg:pl-0 col-span-1 sm:col-span-2 lg:col-span-1 hidden sm:block" />
             <Menu
                 theme="light"
                 mode="horizontal"
-                className="col-span-12 lg:col-span-5 flex items-center justify-center font-bold text-2xl"
+                className="col-span-12 sm:col-span-8 lg:col-span-5 flex items-center justify-center font-bold text-2xl"
                 items={items.map((item) => ({
                     ...item,
                     onClick: () => {

@@ -9,6 +9,9 @@ export default {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                'multi-gradient': 'linear-gradient(to right, var(--primary) 20%, var(--secondary) 50%, transparent 80%)',
+            },
             colors: {
                 primary: "#AC0F0A",
                 secondary: "#FFFFFF",
@@ -19,7 +22,7 @@ export default {
                 transparent: "transparent",
                 backgroundPrimary: "#EBEBEB"
             },
-           
+
             fontSize: {
                 sm: "12px",
                 ssm: "10px",
