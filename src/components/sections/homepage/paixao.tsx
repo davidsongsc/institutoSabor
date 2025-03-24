@@ -8,7 +8,7 @@ const TransformeCarreira: React.FC = () => {
     const width = useWindowWidth();
 
     return (
-        <section id="transformando-paixao" className="relative mt-12  max-w-[1900px] mx-auto bg-secondary rounded-[20px]  ">
+        <section id="transformando-paixao" className="relative mt-[-170px]  max-w-[1900px] mx-auto bg-secondary rounded-[20px]  2xl:mt-[-250px]">
             <div className={`absolute h-screen left-[calc(-300px-1.5vw)] w-screen inset-0 bg-[url('/images/bg/background-legumes.webp')] bg-contain bg-center bg-[-30px_-280px] z-1 opacity-5`}></div>
 
             <div className="relative z-10 col-span-12 grid grid-cols-12 lg:h-[700px] items-center justify-center ">

@@ -1,0 +1,17 @@
+.ant-menu-item {
+    color: #1890ff;
+}
+.ant-menu-item:hover {
+    border: #e6f7ff;
+    color: #1890ff;
+}
+
+.ant-menu {
+    border-bottom: none !important;
+}
+
+.ant-menu-horizontal>.ant-menu-item::after,
+.ant-menu-horizontal>.ant-menu-submenu::after {
+    border-bottom: none !important;
+    transition: none !important;
+}
