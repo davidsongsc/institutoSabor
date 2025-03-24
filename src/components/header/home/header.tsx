@@ -7,33 +7,36 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useRouter } from 'next/navigation';
+import items from "@/consts/itemMenu"
 import './header.css';
 
-const items = [
-    { label: 'Sobre nós', key: 'item-1', href: '#sobre-nos' },
-    { label: 'Cursos', key: 'item-2', href: '#combos-exclusivos' },
-    { label: 'Blog do sabor', key: 'item-3', href: '#blog-do-sabor' },
-    { label: 'Fale conosco', key: 'item-4', href: '#fale-conosco' },
-];
+
 
 const HeaderExterno: React.FC = () => {
+    const router = useRouter();
+
     return (
-        <header className="grid grid-cols-12 gap-4 h-[100px] items-center justify-center bg-transparent">
-            <span className="col-span-2 hidden lg:block"></span>
-            <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="col-span-1 hidden lg:block" />
+        <header className="relative sm:absolute  z-50 left-0 col-span-12 grid grid-cols-12 gap-4 items-center justify-center xl:bg-transparent bg-secondary py-4 sm:px-[145px] ">
+            <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="pl-4 lg:pl-0 col-span-1 sm:col-span-2 lg:col-span-1 hidden sm:block" />
             <Menu
                 theme="light"
                 mode="horizontal"
-                className="col-span-12 lg:col-span-5 flex items-center justify-center font-bold text-2xl"
+                className="col-span-12 sm:col-span-8 lg:col-span-9 flex items-center justify-center font-bold text-2xl"
                 items={items.map((item) => ({
                     ...item,
                     onClick: () => {
-                        const element = document.getElementById(item.href.slice(1)); // Remove o "#" do href
-                        if (element) {
-                            element.scrollIntoView({ behavior: 'smooth' });
+                        if (item.href.startsWith("/")) {
+                            router.push(item.href);
+                        } else {
+                            const element = document.getElementById(item.href.slice(1));
+                            if (element) {
+                                element.scrollIntoView({ behavior: 'smooth' });
+                            }
                         }
                     },
                 }))}
+
             />
             <nav className="col-span-2 hidden lg:block">
                 <ul className="flex gap-3 items-center">
@@ -43,7 +46,7 @@ const HeaderExterno: React.FC = () => {
                     <li className="p-2 bg-primary rounded-full text-secondary"><WhatsAppIcon /></li>
                 </ul>
             </nav>
-            <span className="col-span-1"></span>
+            <span className="col-span-1 hidden lg:block"></span>
         </header>
     );
 };

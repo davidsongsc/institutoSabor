@@ -8,7 +8,11 @@ export default {
         "./src/templates/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        
         extend: {
+            backgroundImage: {
+                'multi-gradient': 'linear-gradient(to right, var(--primary) 20%, var(--secondary) 50%, transparent 80%)',
+            },
             colors: {
                 primary: "#AC0F0A",
                 secondary: "#FFFFFF",
@@ -16,10 +20,11 @@ export default {
                 quaternary: "#FDCC1E",
                 quinary: "#F6F6F6",
                 senary: "#CACACB",
+                septenary: "#E7E7E7",
                 transparent: "transparent",
                 backgroundPrimary: "#EBEBEB"
             },
-           
+
             fontSize: {
                 sm: "12px",
                 ssm: "10px",

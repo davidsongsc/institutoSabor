@@ -9,7 +9,7 @@ const Localizacao: React.FC = () => {
         ">
 
             <span className="col-span-1"></span>
-            <div className="col-span-5 flex items-center justify-start px-14">
+            <div className="col-span-5 flex items-center justify-start sm:px-14">
                 <div className="flex flex-col items-start Nexa justify-center gap-0">
                     <div className="flex  items-center Nexa justify-center gap-0">
                         <LocationOnIcon className="text-primary mr-4" fontSize="large" style={{ scale: 2 }} />

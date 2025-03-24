@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Button, Spin } from "antd";
-import { useCardsData } from "@/hooks/useCardsData";
+import { useCardsDataOffline } from "@/hooks/useCardsDataOffline";
 import CardCombosExclusivos from "@/components/cards/cardsCombo";
 import CardCombosLoading from "@/components/cards/cardsComboLoading";
 import ficticioLoading from "@/services/fake";
@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const CombosExclusivos: React.FC = () => {
     const googlePasta = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRb4Gfi3HjunpPb_-tMBmwYNfrfDQffiY1oZheCBrITYr3SV4oZ8aiVTprLoTOh5_gntnjl3U2gRNre/pub?output=csv";
-    const { cards, loading, error } = useCardsData(googlePasta);
+    const { cards, loading, error } = useCardsDataOffline();
     const [activeIndex, setActiveIndex] = useState(1);
     return (
         <>
@@ -17,8 +17,8 @@ const CombosExclusivos: React.FC = () => {
                 <h1 className="uppercase text-[2rem] lg:text-[3rem] xl:text-[4rem] text-center relative z-10 font-[800]" >Conheça nossos <span className="text-primary">combos exclusivos</span></h1>
             </section>
             <section
-            id="combos-exclusivos"
-                className="flex justify-start items-center sm:items-start h-[800px] sm:h-auto gap-[20px] 
+                id="combos-exclusivos"
+                className="flex justify-start items-center sm:items-start h-[800px] sm:h-[800px] gap-[10px] 
                bg-[url('/images/bg/background-combos.webp')] bg-no-repeat bg-top m-w-[1020px] 
                mt-[-40px] 2xl:mt-[0] relative z-10
                sm:flex-wrap sm:justify-center items-end 
@@ -31,7 +31,7 @@ const CombosExclusivos: React.FC = () => {
                     WebkitOverflowScrolling: "touch",
                 }}
             >
-                <div className="absolute h-screen inset-0 bg-[url('/images/bg/background-legumes.webp')] bg-cover bg-top bg-[-30px_-280px] z-1 opacity-5"></div>
+                <div className="absolute h-screen inset-0  bg-cover bg-top bg-[-30px_-280px] z-1 opacity-5"></div>
 
                 <AnimatePresence>
                     {loading && ficticioLoading.map((card, index) => {
