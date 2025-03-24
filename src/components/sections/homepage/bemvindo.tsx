@@ -1,10 +1,22 @@
 import { Button } from "antd";
 import Image from "next/image";
 import React from "react";
+import HeaderExterno from "@/components/header/externo/header";
 
 const SejaBemVindo: React.FC = () => {
     return (
-        <section id="seja-bem-vindo" className="grid grid-cols-12 gap-8  items-start justify-center md:justify-start h-auto 2xl:max-w-[1900px] mx-auto px-[120px] relative z-10 mb-[250px] ">
+        <section id="seja-bem-vindo"
+
+            className={`grid grid-cols-12 gap-8  items-start justify-center md:justify-start h-screen  2xl:max-w-[1900px] mx-auto px-[120px] relative z-10 mb-[250px] 
+                        bg-[url('/images/bg/background-principal.webp')]  bg-right bg-top bg-no-repeat `}
+            style={{
+                backgroundImage: "url('/images/bg/background-principal.webp')",
+                backgroundPosition: "right top",
+                backgroundRepeat: "no-repeat",
+                backgroundPositionY: "-240px",
+            }}>
+            <HeaderExterno />
+
             <Image
                 src="/images/bg/background-esquerdo.webp"
                 alt="logo"
@@ -24,7 +36,7 @@ const SejaBemVindo: React.FC = () => {
                 alt="logo"
                 width={200}
                 height={200}
-                className="hidden 2xl:block absolute left-0 top-1/2 transform -translate-x-[-940px] -translate-y-[260px] rotate-[160deg] scale-x-[-1] z-1"
+                className="hidden 2xl:block absolute left-0 top-1/2 transform -translate-x-[-990px] -translate-y-[300px] rotate-[160deg] scale-x-[-1] z-1"
             />
 
             <div className="col-span-12 mt-16 w-full text-center md:text-left sm:text-center bg-gradient-to-r from-secondary 2xl:from-transparent to-transparent p-5 rounded-[20px]">

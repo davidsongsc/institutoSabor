@@ -18,7 +18,7 @@ const items = [
 
 const HeaderExterno: React.FC = () => {
     return (
-        <header className="grid grid-cols-12 gap-4 h-[100px] items-center justify-center 2xl:bg-transparent bg-secondary">
+        <header className="col-span-12 grid grid-cols-12 gap-4 h-[70px] items-center justify-center xl:bg-transparent bg-secondary ">
             <span className="col-span-2 hidden lg:block"></span>
             <Image src={"/images/logo.png"} alt="logo" width={100} height={100} className="pl-4 lg:pl-0 col-span-1 sm:col-span-2 lg:col-span-1 hidden sm:block" />
             <Menu
@@ -28,7 +28,7 @@ const HeaderExterno: React.FC = () => {
                 items={items.map((item) => ({
                     ...item,
                     onClick: () => {
-                        const element = document.getElementById(item.href.slice(1)); // Remove o "#" do href
+                        const element = document.getElementById(item.href.slice(1)); 
                         if (element) {
                             element.scrollIntoView({ behavior: 'smooth' });
                         }

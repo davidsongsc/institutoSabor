@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono, Montserrat } from "next/font/google";
-import HeaderExterno from "@/components/header/externo/header";
 import "./globals.css";
 
 import resolveConfig from "tailwindcss/resolveConfig";
@@ -68,15 +67,8 @@ export default function RootLayout({
           }}
         >
           <App>
-            <Layout
-              className="bg-[url('/images/bg/background-principal.webp')] 2xl:bg-contain bg-right bg-top bg-no-repeat"
-              style={{
-                backgroundImage: "url('/images/bg/background-principal.webp')",
-                backgroundPosition: "right top", 
-                backgroundRepeat: "no-repeat",
-                backgroundPositionY: "-140px",
-              }}>
-              <HeaderExterno />
+            <Layout className="bg-septenary"
+              >
 
               {children}
             </Layout>

@@ -19,6 +19,7 @@ export default {
                 quaternary: "#FDCC1E",
                 quinary: "#F6F6F6",
                 senary: "#CACACB",
+                septenary: "#E7E7E7",
                 transparent: "transparent",
                 backgroundPrimary: "#EBEBEB"
             },

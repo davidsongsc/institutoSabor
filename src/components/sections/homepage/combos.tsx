@@ -17,8 +17,8 @@ const CombosExclusivos: React.FC = () => {
                 <h1 className="uppercase text-[2rem] lg:text-[3rem] xl:text-[4rem] text-center relative z-10 font-[800]" >Conheça nossos <span className="text-primary">combos exclusivos</span></h1>
             </section>
             <section
-            id="combos-exclusivos"
-                className="flex justify-start items-center sm:items-start h-[800px] sm:h-auto gap-[20px] 
+                id="combos-exclusivos"
+                className="flex justify-start items-center sm:items-start h-[800px] sm:h-[800px] gap-[10px] 
                bg-[url('/images/bg/background-combos.webp')] bg-no-repeat bg-top m-w-[1020px] 
                mt-[-40px] 2xl:mt-[0] relative z-10
                sm:flex-wrap sm:justify-center items-end 
@@ -31,7 +31,7 @@ const CombosExclusivos: React.FC = () => {
                     WebkitOverflowScrolling: "touch",
                 }}
             >
-                <div className="absolute h-screen inset-0 bg-[url('/images/bg/background-legumes.webp')] bg-cover bg-top bg-[-30px_-280px] z-1 opacity-5"></div>
+                <div className="absolute h-screen inset-0  bg-cover bg-top bg-[-30px_-280px] z-1 opacity-5"></div>
 
                 <AnimatePresence>
                     {loading && ficticioLoading.map((card, index) => {
