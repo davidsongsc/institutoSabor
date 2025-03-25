@@ -30,8 +30,8 @@ const SobreNos: React.FC = () => {
             description: "Com técnica, talento e visão empreendora, você estará pronto para se destacar. No Instituto do Sabor, preparamos você para uma carreira de sucesso na gastronomia.",
             icone: <EmojiEventsIcon />,
         },
-
     ];
+
     return (
         <>
             <HeaderExterno />

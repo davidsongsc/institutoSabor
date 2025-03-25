@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Button, Spin } from "antd";
 import { useCardsDataOffline } from "@/hooks/useCardsDataOffline";
 import CardCombosExclusivos from "@/components/cards/cardsCombo";
@@ -7,14 +7,22 @@ import CardCombosLoading from "@/components/cards/cardsComboLoading";
 import ficticioLoading from "@/services/fake";
 import { motion, AnimatePresence } from "framer-motion";
 
-const CombosExclusivos: React.FC = () => {
+interface ICombosProps {
+    title: ReactNode
+    subtitle?: ReactNode
+    buttonText?: string
+}
+const CombosExclusivos: React.FC<ICombosProps> = (
+    { title, subtitle, buttonText }
+) => {
     const googlePasta = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRb4Gfi3HjunpPb_-tMBmwYNfrfDQffiY1oZheCBrITYr3SV4oZ8aiVTprLoTOh5_gntnjl3U2gRNre/pub?output=csv";
     const { cards, loading, error } = useCardsDataOffline();
     const [activeIndex, setActiveIndex] = useState(1);
     return (
         <>
-            <section className="mt-60 h-[130px] flex items-start justify-center Nexa relative top-[-120px] 2xl:top-0">
-                <h1 className="uppercase text-[2rem] lg:text-[3rem] xl:text-[4rem] text-center relative z-10 font-[800]" >Conheça nossos <span className="text-primary">combos exclusivos</span></h1>
+            <section className="mt-60 h-[130px] flex flex-col  items-center justify-center Nexa relative top-[-120px] 2xl:top-0">
+                <h1 className="uppercase text-[2rem] lg:text-[3rem] xl:text-[4rem] text-center relative z-10 font-[800]" >{title}</h1>
+                <p className="text-[2.2rem] text-center relative z-10">{subtitle}</p>
             </section>
             <section
                 id="combos-exclusivos"
@@ -90,7 +98,7 @@ const CombosExclusivos: React.FC = () => {
 
             </section>
             <div className="flex items-center justify-center py-5">
-                <Button type="primary" size="large" className="uppercase text-[calc(1rem+1.5vw)] p-8 Nexa" >Conheça outros cursos</Button>
+                <Button type="primary" size="large" className="uppercase text-[calc(1rem+1.5vw)] p-8 Nexa" >{buttonText}</Button>
             </div>
         </>
     )

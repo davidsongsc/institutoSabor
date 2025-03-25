@@ -8,8 +8,11 @@ export default {
         "./src/templates/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        
+
         extend: {
+            screens: {
+                '3xl': '2000px', 
+            },
             backgroundImage: {
                 'multi-gradient': 'linear-gradient(to right, var(--primary) 20%, var(--secondary) 50%, transparent 80%)',
             },
