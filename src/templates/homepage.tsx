@@ -12,30 +12,32 @@ import Localizacao from '@/components/sections/homepage/localizacao';
 import Footer from '@/components/footer/footer';
 const HomePage: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
-
+    const Titulo = <>Conheça nossos <span className="text-primary">combos exclusivos</span></>;
+    const buttonTexto   = 'Conheça outros cursos';
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 500);
         return () => clearTimeout(timer);
     }, []);
 
     return (
+
         <main
             className={`opacity-0 transition-opacity duration-1000 ease-in-out transition-delay-500 ${isVisible ? "opacity-100" : ""
                 }`}
         >
             <SejaBemVindo />
-         
+
             <TransformeCarreira />
 
-            <CombosExclusivos />
+            <CombosExclusivos title={Titulo} buttonText={buttonTexto}/>
 
             <FormacaoTecnica />
             <Blog />
             <EduOn />
             <Localizacao />
             <Footer />
-           
-              {/*  */}
+
+            {/*  */}
 
         </main >
     );
