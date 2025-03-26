@@ -13,13 +13,18 @@ const TorneseTecnico: React.FC = () => {
 
     return (
         <>
-            <section className="grid grid-cols-12 items-center justify-center text-center h-auto mt-16 bg-terciary text-secondary">
-                <div className="col-span-12">
-                    <h1 className="uppercase font-bold text-[1.4rem] sm:text-[2.2rem]">
+            <section
+                className="grid grid-cols-12 items-center justify-center text-center
+                h-auto mt-16 bg-terciary text-secondary py-4">
+                <div
+                    className="col-span-12">
+                    <h1
+                        className="uppercase font-bold text-[1.4rem] sm:text-[2.2rem]">
                         {torneseTecnicotextos.titulo}
                     </h1>
                 </div>
-                <ul className="col-span-12 grid grid-cols-12 items-start justify-center text-center h-auto gap-4 sm:px-20 cursor-pointer my-4">
+                <ul
+                    className="col-span-12 grid grid-cols-12 items-start justify-center text-center h-auto gap-4 sm:px-20 cursor-pointer my-4">
                     {torneseTecnicotextos.listaOpcoes?.map((item, index) => (
                         <li
                             key={index}
@@ -61,7 +66,7 @@ const TorneseTecnico: React.FC = () => {
                 <div className="col-span-12">
                     <Button
                         type="primary"
-                        className="text-[0.8rem] sm:text-[2rem] py-6 uppercase font-bold ">
+                        className="text-[0.8rem] sm:text-[4rem] sm:py-10 sm:px-20 uppercase font-bold ">
                         {torneseTecnicotextos.buttonTexto}
                     </Button>
                 </div>

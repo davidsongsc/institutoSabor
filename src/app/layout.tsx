@@ -12,10 +12,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Instituto do Sabor",
