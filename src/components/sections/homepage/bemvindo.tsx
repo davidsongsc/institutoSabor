@@ -31,8 +31,8 @@ const SejaBemVindo: React.FC = () => {
                         width={200}
                         height={200}
                         unoptimized
-                        className=" w-[800px]  lg:block h-auto absolute hidden md:block
-                                    top-1/2 left-0 transform md:-translate-x-36 -translate-x-6
+                        className=" w-[200px]  lg:block h-auto absolute hidden md:block
+                                    top-1/2 left-12 transform md:-translate-x-36 -translate-x-6
                                     2xl:-translate-x-[130px] 3xl:-translate-x-[10px]
                                     lg:-translate-y-[270px]  -translate-y-[100px] z-1
                                     "
@@ -40,19 +40,19 @@ const SejaBemVindo: React.FC = () => {
                     <Image
                         src="/images/bg/background-esquerdo.webp "
                         alt="logo"
-                        width={200}
-                        height={200}
+                        width={100}
+                        height={100}
                         unoptimized
                         className=" 2xl:block absolute left-0 hidden md:block
-                                    top-1/2 transform -translate-x-[-500px]
+                                    top-1/2 transform -translate-x-[-700px]
                                     3xl:-translate-x-[10px] -translate-y-[-40px]
                                     rotate-[-125deg] z-1"
                     />
                     <Image
                         src="/images/bg/background-esquerdo.webp "
                         alt="logo"
-                        width={200}
-                        height={200}
+                        width={100}
+                        height={100}
                         unoptimized
                         className=" 2xl:block absolute left-0 top-1/2 hidden md:block
                                     transform -translate-x-[-990px] 3xl:-translate-x-[-520px]
