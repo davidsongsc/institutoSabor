@@ -11,7 +11,7 @@ export default function HomeNative() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPage(true);
-    }, 2200);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);

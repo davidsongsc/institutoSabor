@@ -10,11 +10,11 @@ const TransformeCarreira: React.FC = () => {
     return (
         <section
             id="transformando-paixao"
-            className="relative mt-[-170px]  max-w-[1900px]
+            className="relative mt-40  max-w-[1900px]
                         mx-auto bg-secondary rounded-[20px]
-                        2xl:mt-[-50px]">
+                        ">
             <div
-                className={`absolute h-auto  w-screen inset-0
+                className={`relative md:absolute h-auto  w-screen inset-0
                          bg-[url('/images/bg/background-legumes.webp')]
                          bg-contain bg-center bg-[-30px_-280px]
                           z-1 opacity-5`}>
@@ -35,7 +35,7 @@ const TransformeCarreira: React.FC = () => {
                         width={2200}
                         height={1500}
                         unoptimized
-                        className="absolute left-1/2 top-1/2 
+                        className="relative md:absolute left-1/2 top-1/2 
                         transform -translate-x-[1150px] 
                         2xl:-translate-x-[1150px] lg:-translate-x-[750px]
                         xl:-translate-x-[950px] xl:-translate-y-[280px] 
@@ -112,7 +112,7 @@ const TransformeCarreira: React.FC = () => {
                         width={1200}
                         height={100}
                         unoptimized
-                        className="w-auto hidden 2xl:block h-auto absolute  transform right-[-160px] top-[-75px]"
+                        className="w-auto hidden 2xl:block h-auto relative md:absolute  transform right-[-160px] top-[-75px]"
                     />
                 </div>
             </div>
