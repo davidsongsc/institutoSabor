@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
 
                 <div className="grid grid-cols-6 lg:grid-cols-12 items-center gap-10 Nexa justify-center gap-0 p-2 sm:p-0">
                     <span className="col-span-1"></span>
-                    <Image src="/images/logo.png" alt="logo" width={300} height={100} className="col-span-6 sm:col-span-3" />
+                    <Image src="/images/logo.png" alt="logo" width={300} height={100} unoptimized className="col-span-6 sm:col-span-3" />
                     <div className="col-span-6 sm:col-span-4">
                         <h1 className="text-5xl Nexa text-quaternary uppercase ">Institucional</h1>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-12 ">
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
 
                     ].map((logo, index) => (
                         <li key={index} className="col-span-4 sm:col-span-1">
-                            <Image src={`/images/selos/${logo}.png`} alt="logo" width={200} height={100} className="p-3" />
+                            <Image src={`/images/selos/${logo}.png`} alt="logo" width={200} unoptimized height={100} className="p-3" />
                         </li>
                     ))}
                 </ul>
