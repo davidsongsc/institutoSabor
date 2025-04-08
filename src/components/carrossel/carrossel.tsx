@@ -54,6 +54,8 @@ const Carrossel: React.FC = () => {
                 src={item.image}
                 alt={item.title}
                 unoptimized
+                width={1000}
+                height={1000}
                 className="w-full h-[200px] object-cover"
               />
               <div className="p-4 bg-quinary flex flex-col items-center w-full justify-between 2xl:h-[220px] h-[200px] xl:h-[150px] sm:h-[110px]">
