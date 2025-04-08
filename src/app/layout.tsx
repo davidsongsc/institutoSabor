@@ -6,6 +6,7 @@ import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config";
 import { useMemo } from "react";
 import { ConfigProvider, App, Layout } from "antd";
+import Head from "next/head";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,14 @@ export default function RootLayout({
 
   return (
     <html lang="pt-br">
+      <Head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/bg/background-principal.webp"
+          type="image/webp"
+        />
+      </Head>
       <body
         className={` 
           ${inter.variable} ${montserrat.variable}  antialiased h-screen  ocultar-scroll   
