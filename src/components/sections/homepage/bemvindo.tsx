@@ -8,21 +8,11 @@ const SejaBemVindo: React.FC = () => {
         <>
             <HeaderExterno />
 
-            <div
-                className="absolute inset-0 "
-                style={{
-                    backgroundImage: "url('/images/bg/background-principal.webp')",
-                    backgroundPosition: "left top",
-                    backgroundRepeat: "repeat-x",
-                    backgroundSize: "auto 100%",
-                    transform: "scaleX(-1)",
-                    opacity: 1,
-                }}
-            ></div>
+
             <section id="seja-bem-vindo"
 
                 className="relative z-10 grid grid-cols-12 gap-8 items-start justify-center md:justify-start
-                           h-[800px] mt-0 mb-[250px] bg-[url('/images/bg/background-principal.webp')]
+                            h-min-[1024px] mt-0  bg-[url('/images/bg/background-principal.webp')]
                            bg-no-repeat bg-right-top bg-auto-100"
             >
 
