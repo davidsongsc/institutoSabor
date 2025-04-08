@@ -28,8 +28,8 @@ const SejaBemVindo: React.FC = () => {
                     <Image
                         src="/images/bg/background-esquerdo.webp"
                         alt="logo"
-                        width={800}
-                        height={800}
+                        width={200}
+                        height={200}
                         unoptimized
                         className=" w-[800px]  lg:block h-auto absolute hidden md:block
                                     top-1/2 left-0 transform md:-translate-x-36 -translate-x-6
@@ -40,8 +40,8 @@ const SejaBemVindo: React.FC = () => {
                     <Image
                         src="/images/bg/background-esquerdo.webp "
                         alt="logo"
-                        width={400}
-                        height={400}
+                        width={200}
+                        height={200}
                         unoptimized
                         className=" 2xl:block absolute left-0 hidden md:block
                                     top-1/2 transform -translate-x-[-500px]
