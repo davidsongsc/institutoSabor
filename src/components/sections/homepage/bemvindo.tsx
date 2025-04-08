@@ -22,7 +22,7 @@ const SejaBemVindo: React.FC = () => {
             <section id="seja-bem-vindo"
 
                 className="relative z-10 grid grid-cols-12 gap-8 items-start justify-center md:justify-start
-                           h-[800px] mt-0 mb-[250px] bg-[url('/images/bg/background-principal.webp')]
+                           h-[1000px] md:h-auto mt-0 mb-[250px] bg-[url('/images/bg/background-principal.webp')]
                            bg-no-repeat bg-right-top bg-auto-100"
             >
 
