@@ -12,7 +12,7 @@ const TransformeCarreira: React.FC = () => {
             id="transformando-paixao"
             className="relative mt-[-170px]  max-w-[1900px]
                         mx-auto bg-secondary rounded-[20px]
-                        2xl:mt-[-250px]">
+                        2xl:mt-[-50px]">
             <div
                 className={`absolute h-auto  w-screen inset-0
                          bg-[url('/images/bg/background-legumes.webp')]
