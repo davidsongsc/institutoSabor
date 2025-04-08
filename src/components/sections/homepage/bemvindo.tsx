@@ -7,16 +7,12 @@ const SejaBemVindo: React.FC = () => {
     return (
         <>
             <HeaderExterno />
-
             <div
                 className="absolute inset-0 "
-
             >
                 <Image src="/images/bg/background-principal.webp"
-                    
-                    
-                    objectFit="cover"
-                    alt="logo" width={100} height={100} unoptimized className="w-full h-auto" />
+
+                    alt="logo" width={100} height={100} unoptimized className="w-[50%] right-0 absolute hidden md:block" />
             </div>
             <section id="seja-bem-vindo"
 
