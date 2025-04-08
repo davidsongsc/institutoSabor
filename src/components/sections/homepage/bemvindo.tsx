@@ -9,7 +9,7 @@ const SejaBemVindo: React.FC = () => {
             <HeaderExterno />
 
             <div
-                className="absolute inset-0 "
+                className="absolute inset-0 hidden"
                 style={{
                     backgroundImage: "url('/images/bg/background-principal.webp')",
                     backgroundPosition: "left top",
@@ -21,7 +21,7 @@ const SejaBemVindo: React.FC = () => {
             ></div>
             <section id="seja-bem-vindo"
 
-                className="relative z-10 grid grid-cols-12 gap-8 items-start justify-center md:justify-start h-screen mt-0 mb-[250px]"
+                className="relative z-10 grid grid-cols-12 gap-8 items-start justify-center md:justify-start h-screen mt-0 mb-[250px] hidden"
                 style={{
                     backgroundImage: "url('/images/bg/background-principal.webp')",
                     backgroundPosition: "right top",
@@ -30,7 +30,7 @@ const SejaBemVindo: React.FC = () => {
                 }}
             >
 
-                <div className="2xl:max-w-[1900px] mx-auto px-[120px] col-span-6 3xl:col-span-12">
+                <div className="2xl:max-w-[1900px] mx-auto px-[120px] col-span-6 3xl:col-span-12 hidden">
                     <Image
                         src="/images/bg/background-esquerdo.webp"
                         alt="logo"
@@ -42,7 +42,7 @@ const SejaBemVindo: React.FC = () => {
                                     lg:-translate-y-[270px]  -translate-y-[100px] z-1"
                     />
                     <Image
-                        src="/images/bg/background-esquerdo.webp"
+                        src="/images/bg/background-esquerdo.webp hidden"
                         alt="logo"
                         width={400}
                         height={400}
@@ -52,7 +52,7 @@ const SejaBemVindo: React.FC = () => {
                                     rotate-[-125deg] z-1"
                     />
                     <Image
-                        src="/images/bg/background-esquerdo.webp"
+                        src="/images/bg/background-esquerdo.webp hidden"
                         alt="logo"
                         width={200}
                         height={200}
