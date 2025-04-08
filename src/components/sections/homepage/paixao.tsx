@@ -34,12 +34,12 @@ const TransformeCarreira: React.FC = () => {
                         alt="logo"
                         width={2200}
                         height={1500}
+                        unoptimized
                         className="absolute left-1/2 top-1/2 
                         transform -translate-x-[1150px] 
                         2xl:-translate-x-[1150px] lg:-translate-x-[750px]
                         xl:-translate-x-[950px] xl:-translate-y-[280px] 
                         2xl:-translate-y-[580px] -translate-y-[580px] z-1"
-                        unoptimized={true}
                     />
 
                 </span>
@@ -111,6 +111,7 @@ const TransformeCarreira: React.FC = () => {
                         alt="logo"
                         width={1200}
                         height={100}
+                        unoptimized
                         className="w-auto hidden 2xl:block h-auto absolute  transform right-[-160px] top-[-75px]"
                     />
                 </div>

@@ -75,6 +75,7 @@ const CardCombosLoading: React.FC<CardCombosProps & { isLoading: boolean }> = ({
                                             alt="logo"
                                             width={90}
                                             height={100}
+                                            unoptimized
                                             className={`${isLoading ? "blur-md" : ""}`}
                                         />
                                         <span className={`text-left text-[1.1rem] w-[210px] ${isLoading ? "blur-sm" : ""}`}>

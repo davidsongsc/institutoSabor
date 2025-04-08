@@ -9,7 +9,7 @@ const SejaBemVindo: React.FC = () => {
             <HeaderExterno />
 
             <div
-                className="absolute inset-0 hidden"
+                className="absolute inset-0 "
                 style={{
                     backgroundImage: "url('/images/bg/background-principal.webp')",
                     backgroundPosition: "left top",
@@ -22,7 +22,7 @@ const SejaBemVindo: React.FC = () => {
             <section id="seja-bem-vindo"
 
                 className="relative z-10 grid grid-cols-12 gap-8 items-start
-                 justify-center md:justify-start h-screen mt-0 mb-[250px] hidden"
+                 justify-center md:justify-start h-screen mt-0 mb-[250px] "
                 style={{
                     backgroundImage: "url('/images/bg/background-principal.webp')",
                     backgroundPosition: "right top",
@@ -31,33 +31,36 @@ const SejaBemVindo: React.FC = () => {
                 }}
             >
 
-                <div className="2xl:max-w-[1900px] mx-auto px-[120px] col-span-6 3xl:col-span-12 hidden">
+                <div className="2xl:max-w-[1900px] mx-auto px-[120px] col-span-6 3xl:col-span-12 ">
                     <Image
                         src="/images/bg/background-esquerdo.webp"
                         alt="logo"
                         width={800}
                         height={800}
-                        className="w-[800px] hidden lg:block h-auto absolute
+                        unoptimized
+                        className="w-[800px]  lg:block h-auto absolute
                                     top-1/2 left-0 transform md:-translate-x-36 -translate-x-6
                                     2xl:-translate-x-[130px] 3xl:-translate-x-[10px]
                                     lg:-translate-y-[270px]  -translate-y-[100px] z-1"
                     />
                     <Image
-                        src="/images/bg/background-esquerdo.webp hidden"
+                        src="/images/bg/background-esquerdo.webp "
                         alt="logo"
                         width={400}
                         height={400}
-                        className="hidden 2xl:block absolute left-0
+                        unoptimized
+                        className=" 2xl:block absolute left-0
                                     top-1/2 transform -translate-x-[-500px]
                                     3xl:-translate-x-[10px] -translate-y-[-40px]
                                     rotate-[-125deg] z-1"
                     />
                     <Image
-                        src="/images/bg/background-esquerdo.webp hidden"
+                        src="/images/bg/background-esquerdo.webp "
                         alt="logo"
                         width={200}
                         height={200}
-                        className="hidden 2xl:block absolute left-0 top-1/2
+                        unoptimized
+                        className=" 2xl:block absolute left-0 top-1/2
                                     transform -translate-x-[-990px] 3xl:-translate-x-[-520px]
                                     -translate-y-[300px] rotate-[160deg] scale-x-[-1] z-1"
                     />

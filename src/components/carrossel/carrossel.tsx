@@ -2,6 +2,7 @@ import { Carousel } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import React, { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface MenuItem {
   id: number;
@@ -49,9 +50,10 @@ const Carrossel: React.FC = () => {
         {items.map((item) => (
           <div key={item.id} className="px-2">
             <div className="border border-black rounded-[20px] shadow-lg overflow-hidden bg-white text-center">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
+                unoptimized
                 className="w-full h-[200px] object-cover"
               />
               <div className="p-4 bg-quinary flex flex-col items-center w-full justify-between 2xl:h-[220px] h-[200px] xl:h-[150px] sm:h-[110px]">

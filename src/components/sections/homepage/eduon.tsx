@@ -16,6 +16,7 @@ const EduOn: React.FC = () => {
                         alt="Instrutores"
                         width={1100}
                         height={500}
+                        unoptimized
                         className="w-[calc(100%+100px)]"
                     />
                 </div>

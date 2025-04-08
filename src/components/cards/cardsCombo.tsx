@@ -64,7 +64,7 @@ const CardCombosExclusivos: React.FC<CardCombosProps> = ({
                         >
                             Saiba mais
                         </Button>
-                        
+
                     </div>
 
                     <div className="w-full bg-gray-100 flex items-start justify-start" >
@@ -80,7 +80,9 @@ const CardCombosExclusivos: React.FC<CardCombosProps> = ({
                                     className="text-sm text-center font-bold mb-4"
                                 >
                                     <div className="flex items-center justify-start w-full">
-                                        <Image src={`/images/items/${item.img}.webp`} alt="logo" width={90} height={100} ></Image>
+                                        <Image src={`/images/items/${item.img}.webp`} alt="logo" width={90} height={100}
+                                            priority={false}
+                                            quality={75} ></Image>
                                         <span className="text-left text-[1.1rem] w-[210px]">{item.texto}</span>
                                     </div>
                                 </li>

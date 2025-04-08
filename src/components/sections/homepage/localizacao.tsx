@@ -37,6 +37,7 @@ const Localizacao: React.FC = () => {
                         alt="Ver no Google Maps"
                         width={900}
                         height={300}
+                        unoptimized
                         className="rounded-lg shadow-md hover:opacity-80 transition-opacity border border-2 border-primary"
                     />
                 </a>
