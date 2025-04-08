@@ -29,6 +29,7 @@ const FormacaoTecnica: React.FC = () => {
                             alt="Instrutores"
                             width={1000}
                             height={500}
+                            unoptimized
                             className={`absolute bottom-[-24px] right-[-100px] transform translate-x-[60%] `}
                         />
                     </div>
