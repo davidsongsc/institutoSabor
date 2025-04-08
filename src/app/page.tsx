@@ -11,12 +11,12 @@ export default function HomeNative() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPage(true);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  if (!showPage) return <Spin size="large" tip="Carregando..." />
+  if (!showPage) return <Spin className="h-screen w-screen flex justify-center items-center" size="large" tip="Carregando..." />
   else (router.push(`/home`));
 
   return;
