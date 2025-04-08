@@ -21,7 +21,9 @@ const SejaBemVindo: React.FC = () => {
             ></div>
             <section id="seja-bem-vindo"
 
-                className="relative z-10 grid grid-cols-12 gap-8 items-start justify-center md:justify-start h-screen mt-0 mb-[250px] bg-[url('/images/bg/background-principal.webp')] bg-no-repeat bg-right-top bg-auto-100"
+                className="relative z-10 grid grid-cols-12 gap-8 items-start justify-center md:justify-start
+                           h-[800px] mt-0 mb-[250px] bg-[url('/images/bg/background-principal.webp')]
+                           bg-no-repeat bg-right-top bg-auto-100"
             >
 
                 <div className="2xl:max-w-[1900px] mx-auto px-[120px] col-span-6 3xl:col-span-12 ">
